@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<link rel="stylesheet" href="PictureCube.css" />
+		<script src="PictureCube.js"></script>
+		
+		<script>
+			addEventListener('DOMContentLoaded', function() {
+				var cube = new PictureCube('test', [
+					'/jquery/plugin/PictureCube/img/izzie/1.jpg',
+					'/jquery/plugin/PictureCube/img/izzie/2.jpg',
+					'/jquery/plugin/PictureCube/img/izzie/3.jpg',
+					'/jquery/plugin/PictureCube/img/izzie/4.jpg',
+					'/jquery/plugin/PictureCube/img/izzie/5.jpg',
+					'/jquery/plugin/PictureCube/img/izzie/6.jpg'
+				]);
+				cube.cycle(2000);
+			});		
+		</script>
+	</head>
+	<body>
+		<div id="test"></div>	
+	</body>
+</html>
