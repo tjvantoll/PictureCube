@@ -3,6 +3,8 @@
  * @param images {Array} An Array of 6 Strings containing the URLs of the images to place in the cube
  */
 PictureCube = function(node, images) {
+	if (!node) return;
+
 	var base = (typeof node == 'string' ? document.getElementById(node) : node);
 	base.className += ' PictureCube-container';
 	
@@ -16,17 +18,17 @@ PictureCube = function(node, images) {
 	'</div>';
 	
 	this.cube = base.childNodes[0],
-	this.cycleTimeoutId;
-	this.images = images;
+		this.cycleTimeoutId = null,
+		this.images = images;
 	
 	this.cube.setAttribute('data-cube-picture-number', 1);	
 };
 
 /**
- * @param slide {number} The number of the slide to change the cube to.
+ * @param side {number} The number of the side to change the cube to.
  */
-PictureCube.prototype.goto = function(slide) {
-	switch(slide) {
+PictureCube.prototype.goto = function(side) {
+	switch(side) {
 		case 1:
 			this.cube.className = 'show-front';
 			break;
@@ -48,13 +50,18 @@ PictureCube.prototype.goto = function(slide) {
 	}
 	
 	this.cube.className += ' cube';
-	this.cube.setAttribute('data-cube-picture-number', slide);
+	this.cube.setAttribute('data-cube-picture-number', side);
 };
 
 /**
  * @param interval {number} The number of milliseconds between each image transition
  */
 PictureCube.prototype.cycle = function(interval) {
+	//Allow for consecutive calls to cycle without calling clearCycle.
+	if (this.cycleTimeoutId !== null) {
+		this.clearCycle();
+	}
+
 	var pictureNumber = this.cube.getAttribute('data-cube-picture-number');
 	
 	this.cycleTimeoutId = setInterval(function(instance) {
@@ -72,4 +79,3 @@ PictureCube.prototype.cycle = function(interval) {
 PictureCube.prototype.clearCycle = function() {
 	clearTimeout(this.cycleTimeoutId);
 };
-	
