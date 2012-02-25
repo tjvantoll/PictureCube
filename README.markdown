@@ -45,15 +45,15 @@ clearCycle - Clear the interval created by cycle.
 
 The following technique can be used to extend PictureCube.  This example creates an AwesomeCube that inherits the base methods from PictureCube's prototype.
 
-AwesomeCube = function(node, images) {
-    PictureCube.apply(this, [node, images]);
-};
-AwesomeCube.prototype = new PictureCube();
-AwesomeCube.prototype.newMethod = function() {
-    //this.cube, this.images, this.goto, this.cycle
-    //and this.clearCycle are available to the new
-    //function.
-};
+	AwesomeCube = function(node, images) {
+	    PictureCube.apply(this, [node, images]);
+	};
+	AwesomeCube.prototype = new PictureCube();
+	AwesomeCube.prototype.newMethod = function() {
+	    //this.cube, this.images, this.goto, this.cycle
+	    //and this.clearCycle are available to the new
+	    //function.
+	};
 
 ## Limitations
 
