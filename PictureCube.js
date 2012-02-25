@@ -25,7 +25,7 @@ PictureCube = function(node, images) {
 };
 
 /**
- * @param side {number} The number of the side to change the cube to.
+ * @param side {number} The number of the side to change the cube to. (1 - 6)
  */
 PictureCube.prototype.goto = function(side) {
 	switch(side) {
