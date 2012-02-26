@@ -1,10 +1,15 @@
 # PictureCube
 
-Create a 3D interactive cube with an image on all 6 sides.  For a full explanation of the creation of this file and a full demo of all of the functionality see tjvantoll.com.
+Create a 3D interactive cube with an image on all 6 sides.  For a full explanation of the creation of this file and a full demo of all of the functionality see http://tjvantoll.com.  [All browsers that support CSS 3D transforms](http://caniuse.com/#feat=transforms3d) are supported.  Browsers that do not support the transforms will simply see a box with the first image passed in.
 
 ## Usage
 
-Call the constructor after the 'DOMContentLoaded' event has fired.
+Include the CSS and JS files.
+
+	<link rel="stylesheet" href="/PictureCube.css" />
+	<script src="/PictureCube.js"></script>
+
+Call the constructor anytime after the 'DOMContentLoaded' event has fired.
 
 	/**
 	 * @param node {DOMNode|string} The node to turn into the cube or the id attribute of the node
