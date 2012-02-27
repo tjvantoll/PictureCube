@@ -32,7 +32,7 @@ Since PictureCube depends on CSS 3D transforms, you can use [Modernizr](http://m
 		new PictureCube('', []);
 	}
 	
-but there's really no harm in calling PictureCube blindly.  Browsers that don't support 3D transforms will just get a box with the first image in the array passed in.
+...but there's really no harm in calling PictureCube blindly.  Browsers that don't support 3D transforms will just get a box with the first image in the array passed in.
 	
 ## Methods
 
