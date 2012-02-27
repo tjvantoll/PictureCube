@@ -1,6 +1,6 @@
 # PictureCube
 
-Create a 3D interactive cube with an image on all 6 sides.  For a full explanation of the creation of this file and a full demo of all of the functionality see http://tjvantoll.com/2012/02/27/Making-a-3D-Picture-Cube-with-CSS3/.  [All browsers that support CSS 3D transforms](http://caniuse.com/#feat=transforms3d) are supported.  Browsers that do not support the transforms will simply see a box with the first image passed in.
+Create a 3D interactive cube with an image on all 6 sides.  For a full explanation of the creation of this file and a full demo of all of the functionality see http://tjvantoll.com/2012/02/27/Making-a-3D-Picture-Cube-with-CSS3/.  [All browsers that support CSS 3D transforms](http://caniuse.com/#feat=transforms3d) are supported.
 
 ## Usage
 
