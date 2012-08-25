@@ -1,10 +1,16 @@
+/*
+ * PictureCube - https://github.com/tjvantoll/PictureCube
+ * Copyright: Ted VanToll 2012
+ * Released under the MIT license.
+ */
+
 /**
  * @param node {DOMNode|string} The node to turn into the cube or the id attribute of the node
  * @param images {Array} An Array of 6 Strings containing the URLs of the images to place in the cube
  * @param options {Object} Optional
  *             onchange {Function} Callback to invoke when the side of the cube is change.,
  */
-PictureCube = function(node, images, options) {
+window.PictureCube = function(node, images, options) {
 	if (!node) return;
 	options = options || {};
 
@@ -38,7 +44,7 @@ PictureCube = function(node, images, options) {
 		if (options.onchange) {
 			options.onchange(side, image, cubeHolder);
 		}
-	}
+	};
 
 	var transitionEndEvents = ['webkitTransitionEnd', 'transitionend', 'otransitionend'];
 	for (var i = 0; i < transitionEndEvents.length; i++) {
@@ -94,7 +100,7 @@ PictureCube.prototype.cycle = function(interval) {
 			if (pictureNumber == instance.images.length + 1) {
 				pictureNumber = 1;
 			}						
-		}
+		};
 	}(this), interval);
 };
 
