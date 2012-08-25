@@ -1,6 +1,6 @@
 /*
  * PictureCube - https://github.com/tjvantoll/PictureCube
- * Copyright: Ted VanToll 2012
+ * Copyright: Ted VanToll (http://tjvantoll.com) 2012
  * Released under the MIT license.
  */
 
