@@ -6,14 +6,39 @@
 		
 		<script>
 			addEventListener('DOMContentLoaded', function() {
-				cube = new PictureCube('test', [
-					'img/izzie/1.jpg',
-					'img/izzie/2.jpg',
-					'img/izzie/3.jpg',
-					'img/izzie/4.jpg',
-					'img/izzie/5.jpg',
-					'img/izzie/6.jpg'
-				]);
+				cube = new PictureCube('test', 
+					[
+						{
+							src: 'img/izzie/1.jpg',
+							title: 'Izzie in the Snow!'
+						},
+						{
+							src: 'img/izzie/2.jpg',
+							title: 'Izzie in a Coat!'
+						},
+						{
+							src: 'img/izzie/3.jpg',
+							title: 'Izzie eats a Bone!'
+						},
+						{
+							src: 'img/izzie/4.jpg',
+							title: 'Izzie on the Porch!'
+						},
+						{
+							src: 'img/izzie/5.jpg',
+							title: 'Izzie on the Couch!'
+						},
+						{
+							src: 'img/izzie/6.jpg',
+							title: 'Izzie in a Helmet!'
+						}
+					],
+					{
+						onchange: function() {
+							console.log(arguments);
+						}
+					}
+				);
 				cube.cycle(2000);
 			});		
 		</script>
