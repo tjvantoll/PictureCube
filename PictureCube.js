@@ -6,6 +6,7 @@
  */
 PictureCube = function(node, images, options) {
 	if (!node) return;
+	options = options || {};
 
 	var base = (typeof node == 'string' ? document.getElementById(node) : node);
 	base.className += ' PictureCube-container';
@@ -23,7 +24,8 @@ PictureCube = function(node, images, options) {
 	
 	this.cube = base.childNodes[0],
 		this.cycleTimeoutId = null,
-		this.images = images;
+		this.images = images,
+		this.options = options;
 	
 	this.cube.setAttribute('data-cube-picture-number', 1);
 
