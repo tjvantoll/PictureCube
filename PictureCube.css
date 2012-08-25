@@ -76,7 +76,7 @@
 	-o-transform: rotateY( 90deg ) translateZ( 50px );
 	-ms-transform: rotateY( 90deg ) translateZ( 50px );
 	transform: rotateY( 90deg ) translateZ( 50px );
-.}
+}
 
 .PictureCube-container .cube .left {
 	-webkit-transform: rotateY( -90deg ) translateZ( 50px );
