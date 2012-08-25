@@ -32,6 +32,7 @@ PictureCube = function(node, images, options) {
 	var cubeHolder = this;
 	var transitionEvent = function(event) {
 		var side = parseInt(event.target.getAttribute('data-cube-picture-number'), 10);
+		if (!side) return;
 		var image = cubeHolder.cube.childNodes[side - 1].childNodes[0];
 		
 		if (options.onchange) {
